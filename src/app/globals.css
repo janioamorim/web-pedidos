@@ -19,3 +19,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+::placeholder {
+  color: #97A1A8;
+  opacity: 1;
+}
