@@ -12,7 +12,7 @@ interface InfoCardProps {
 
 export default function InfoCard({ icon, label, value, amount }: InfoCardProps) {
   return (
-    <div className="flex flex-col w-1/3 items-start bg-white p-6 rounded-8 shadow-md">
+    <div className="flex flex-col w-1/3 items-start bg-white p-6 rounded-8 shadow-md flex-custom-card">
       <Image src={icon} alt={label} width={48} height={48} priority className="mb-4" />
       { amount === 0 ? 
         <PlaceHolderAmount /> : 

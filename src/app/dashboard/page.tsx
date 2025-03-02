@@ -55,15 +55,15 @@ export default function Dashboard() {
   const hasOrders = useMemo(() => orders.length > 0, [orders]);
  
   return (
-    <div className="flex min-h-screen w-full bg-gray-custom">
+    <div className="flex min-h-screen w-full">
       <div className="flex flex-1">
         <Sidebar />
-        <main className="flex-1 flex flex-col">
+        <main className="flex-1 flex flex-col bg-gray-custom">
           <Header />
           <div className="flex-1 mt-6 mx-10">
             <h1 className="text-base text-gray-400">Resumo dos pedidos</h1>
           
-            <div className="flex items-center justify-between gap-5 py-5">
+            <div className="flex items-center justify-between gap-5 py-5 flex-custom">
               <InfoCard
                 icon="/pedidos-icon.svg"
                 label="Pedidos"

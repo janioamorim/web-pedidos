@@ -19,17 +19,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const tokenStorage = localStorage.getItem("token");
+    const profileName = localStorage.getItem("profileName");
     if (tokenStorage) {
-      setUser("Usuário Autenticado");
+      setUser(profileName);
     }else{
       router.push("/auth/login");
     }
   }, [token]);
 
   const login = async (email: string, password: string) => {
-    const { token } = await loginService(email, password);
+    const { token, profile } = await loginService(email, password);
     setToken(token);
+    setUser(profile.name);
     localStorage.setItem("token", token);
+    localStorage.setItem("profileName", profile.name);
   };
 
   const logout = () => {

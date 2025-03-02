@@ -78,7 +78,7 @@ export default function OrdersTable({ orders }: { orders: any[] }) {
   };
 
   return (
-    <div>
+    <div className="overflow-x-auto">
       <table className="min-w-full border border-gray-200 shadow-md rounded-lg table-custom">
         <thead>
           <tr className="text-white">
@@ -95,7 +95,7 @@ export default function OrdersTable({ orders }: { orders: any[] }) {
         </thead>
         <tbody className="bg-white">
           {paginatedOrders.map((order, index) => (
-            <tr key={index} className="border-t border-gray-200">
+            <tr key={index} className="border-t border-gray-200 ">
               <td className="px-4 py-2">{order._id}</td>
               <td className="px-4 py-2">{order.seller.id}</td>
               <td className="px-4 py-2">

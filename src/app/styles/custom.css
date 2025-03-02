@@ -29,6 +29,10 @@
 .text-font-14{
   font-size: 14px;
 }
+.text-align{
+  text-align: right;
+  width: 200px;
+}
 .bg-gray-custom {
   background-color: #faf8f8;
 }
@@ -58,5 +62,16 @@
 }
 
 
+
+@media (max-width: 800px) {
+  .flex-custom {
+    flex-direction: column !important;
+  
+  }
+  .flex-custom-card{
+    flex: 100% !important;
+    width: 100% !important;
+  }
+}
 
 
